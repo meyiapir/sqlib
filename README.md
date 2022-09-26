@@ -1,7 +1,7 @@
 # Sqlib is a small ORM for MariaDB. 
 ### It provides a simple interface for quick and convenient work with MariaDB
 
-## Installation: 
+## Installation(Temporarily not working): 
 ```bash
 pip install sqlib
 ```
