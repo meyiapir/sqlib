@@ -1,6 +1,5 @@
 from modules.connection import *
 from modules.select import *
-from loguru import logger
 
 class Sqlib(Connection, Select):
     def __init__(self, host: str, user: str, password: str, settings: dict):
