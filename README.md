@@ -9,10 +9,13 @@ pip install sqlib
 ## Usage(example): 
 ```python
 from sqlib import Sqlib
-db = Sqlib('localhost', 'root', 'password', 'database')
-db.create_table('users', {
-    'id': 'int',
-    'name': 'varchar(255)',
-    'age': 'int'
-})
+db = Sqlib("localhost", "user", "password", {"database": "tests"})
+data = db.select(
+    table="table_name", 
+    columns=["age", "email"],
+    where={"name": "martin"}, 
+    limit=2)
+
+for row in data:
+    print(row[0], row[1])
 ```
