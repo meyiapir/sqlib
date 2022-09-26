@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "sqlib"
+version = "0.1.0 ALPHA"
+description = "!ALPHA! Small ORM for MariaDB database"
+authors = ["meyiapir <mmeyiapir@gmail.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+packages = [{include = "sqlib"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
