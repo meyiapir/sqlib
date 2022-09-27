@@ -27,6 +27,7 @@ class Connection:
     def execute(self, query):
         try:
             self.cursor.execute(query)
+            self.conn.commit()
             return self.cursor.fetchall()
         except mariadb.Error as e:
             print(f"Error executing query: {e}")

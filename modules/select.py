@@ -6,7 +6,8 @@ class Select:
         self.limit = limit
         self.cursor = cursor
 
-    def select(self, table: str, columns: list, where: dict = None, limit: int = None):
+    def select(self, table: str, columns: list, where: dict = None, limit: int = None) -> list:
+
         if where is None and limit is None:
             self.cursor.execute(f"SELECT {', '.join(columns)} FROM {table}")
         elif where is None and limit is not None:
@@ -19,7 +20,7 @@ class Select:
                 f"SELECT {', '.join(columns)} FROM {table} WHERE {list(where.keys())[0]} = '{list(where.values())[0]}' LIMIT {limit}")
         return self.cursor.fetchall()
 
-    def select_all(self, table: str, where: dict = None):
+    def select_all(self, table: str, where: dict = None) -> list:
         if where is None:
             self.cursor.execute(f"SELECT * FROM {table}")
         else:
