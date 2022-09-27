@@ -16,7 +16,7 @@ class Sqlib(Connection, Select, Create):
     # def select(self, table: str, columns: list, where: dict = None, limit: int = None):
     #     return super().select(table, columns, where, limit)
 
-    def create(self, cursor, table, columns, value):
-        super().create(cursor, "table_name", ["name", "age", "email"], ["'martin'", "20", "'mmasd'"])
+    # def create(self, cursor, table, columns, value):
+    #     super().create(cursor, "table_name", ["name", "age", "email"], ["'martin'", "20", "'qwerty'"])
     def __str__(self) -> str:
         return f"Host: {self.host}, User: {self.user}, Password: {self.password}, Settings: {self.settings}"

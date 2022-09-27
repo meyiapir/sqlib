@@ -12,7 +12,12 @@ pip install sqlib
 ## Usage(example): 
 ```python
 from sqlib import Sqlib
-db = Sqlib("localhost", "user", "password", {"database": "tests"})
+
+db = Sqlib(host="localhost",
+           user="root",
+           password="root_pass",
+           database="tests")
+
 data = db.select(
     table="table_name", 
     columns=["age", "email"],

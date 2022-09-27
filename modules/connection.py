@@ -24,11 +24,12 @@ class Connection:
             print(f"Error connecting to MariaDB Platform: {e}")
             exit(1)
 
-    def execute(self, query):
+    def execute(self, *, query, watch_mode=0):
         try:
             self.cursor.execute(query)
             self.conn.commit()
-            return self.cursor.fetchall()
+            if watch_mode == 1:
+                return self.cursor.fetchall()
         except mariadb.Error as e:
             print(f"Error executing query: {e}")
             exit(1)
