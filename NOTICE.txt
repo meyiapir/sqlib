@@ -1,0 +1,5 @@
+Sqlib ORM library
+Copyright 2022 meyiapir.
+
+This product includes software developed at
+Python Software Foundation (https://www.python.org/).
