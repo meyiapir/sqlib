@@ -1,6 +1,6 @@
-from modules.connection import *
-from modules.create import Create
-from modules.select import *
+from sqlib.modules.connection import *
+from sqlib.modules.create import Create
+from sqlib.modules.select import *
 
 
 class Sqlib(Connection, Select, Create):
@@ -12,6 +12,7 @@ class Sqlib(Connection, Select, Create):
         self.user = user
         self.password = password
         self.settings = settings
+
 
     # def select(self, table: str, columns: list, where: dict = None, limit: int = None):
     #     return super().select(table, columns, where, limit)

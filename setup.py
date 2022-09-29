@@ -1,6 +1,6 @@
 from setuptools import setup
 
-version = '0.1.2'
+version = '0.1.8'
 
 long_description = '''
 It provides a simple interface for quick and convenient work with MariaDB.
@@ -11,7 +11,7 @@ setup(
 
     version=version,
 
-    packages=['sqlib'],
+    packages=['sqlib', 'sqlib.modules'],
     install_requires=['mariadb'],
 
     url='https://github.com/meyiapir/sqlib',
@@ -24,5 +24,8 @@ setup(
 
     description='Sqlib is a small ORM for MariaDB.',
 
-    long_description=open('README.md').read(),
+    description_content_type='text/markdown',
+
+    long_description=long_description,
+    long_description_content_type='text/markdown',
 )

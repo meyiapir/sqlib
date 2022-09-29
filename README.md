@@ -2,7 +2,7 @@
 ### It provides a simple interface for quick and convenient work with MariaDB
 
 ***
-**`VERSION: 0.1.2(ALPHA)`**
+**`VERSION: 0.1.8(ALPHA)`**
 
 ## Installation(Temporarily not working): 
 ```bash

@@ -1,3 +1,5 @@
+from sqlib.modules.connection import *
+
 class Select:
     def __init__(self, cursor, table: str, columns: list, where: dict = None, limit: int = None):
         self.table = table
