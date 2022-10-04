@@ -10,7 +10,7 @@ class Connection:
         self.cursor = None
         self.conn = None
 
-    def connect(self):
+    def connect(self) -> mariadb.connect:
         try:
             self.conn = mariadb.connect(
                 user=self.user,
@@ -24,7 +24,7 @@ class Connection:
             print(f"Error connecting to MariaDB Platform: {e}")
             exit(1)
 
-    def execute(self, *, query, watch_mode=0):
+    def execute(self, *, query, watch_mode=0) -> list:
         try:
             self.cursor.execute(query)
             self.conn.commit()
@@ -34,5 +34,5 @@ class Connection:
             print(f"Error executing query: {e}")
             exit(1)
 
-    def close(self):
+    def close(self) -> None:
         self.conn.close()
