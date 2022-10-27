@@ -1,6 +1,6 @@
 from setuptools import setup
 
-version = '0.1.8'
+version = '0.2.0'
 
 long_description = '''
 It provides a simple interface for quick and convenient work with MariaDB.
