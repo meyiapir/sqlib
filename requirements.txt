@@ -1,1 +1,2 @@
 mariadb~=1.1.4
+setuptools~=60.2.0
