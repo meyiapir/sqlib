@@ -1,9 +1,10 @@
 from sqlib.modules.connection import *
 from sqlib.modules.insert import *
 from sqlib.modules.select import *
+from sqlib.modules.create import *
 
 
-class Sqlib(Connection, Select, Insert):
+class Sqlib(Connection, Select, Insert, Create):
     def __init__(self, *, host: str, user: str, password: str, database: str, settings: dict = {}):
         if "port" in settings:
             self.host = f"{host}:{settings['port']}"

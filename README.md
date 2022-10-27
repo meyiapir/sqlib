@@ -2,7 +2,7 @@
 ### It provides a simple interface for quick and convenient work with MariaDB
 
 ***
-**`VERSION: 0.1.8(ALPHA)`**
+**`VERSION: 0.2.0(ALPHA)`**
 
 ## Installation(Temporarily not working): 
 ```bash
@@ -27,3 +27,8 @@ data = db.select(
 for row in data:
     print(row[0], row[1])
 ```
+## New in 0.2.0(ALPHA)
+- Fixed some bugs 
+- Added new Create(create_table) method
+- Added new Insert method
+- Fixed some problems 
